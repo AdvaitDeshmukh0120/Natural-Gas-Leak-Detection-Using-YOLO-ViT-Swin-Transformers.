@@ -1,11 +1,11 @@
-# Natural-Gas-Leak-Detection-Using-YOLO-ViT-Swin-Transformers.
-🚀 Overview
+# Natural Gas Leak Detection using YOLO
 
-TunnelView is an AI system combining YOLOv8, Vision Transformer, and Swin Transformer to detect pipeline leaks accurately and in real time. It enables early warnings, reducing risks and supporting proactive maintenance in oil, gas, and chemical plants.
+## 🚀 Overview
+This project uses **YOLO (You Only Look Once)** to detect **natural gas leaks** from pipeline images and videos. It applies **deep learning and computer vision** techniques to automate the detection process and improve safety measures.
 
 ## 📂 Dataset Structure
 The dataset is structured as follows:
-
+```
 /data
  ├── train
  │   ├── images
@@ -16,21 +16,21 @@ The dataset is structured as follows:
  ├── test
  │   ├── images
  │   ├── labels
-
+```
 It consists of images labeled as:
-- *"leak"* → Pipeline images containing gas leaks.
-- *"no leak"* → Normal pipeline images without leaks.
+- **"leak"** → Pipeline images containing gas leaks.
+- **"no leak"** → Normal pipeline images without leaks.
 
-## ⚙ Installation
+## ⚙️ Installation
 ### 1️⃣ Install Dependencies
 Run the following command to install the required libraries:
-bash
+```bash
 pip install ultralytics torch torchvision matplotlib numpy
-
+```
 
 ## 🎯 Training the YOLO Model
 ### 2️⃣ Train the Model
-python
+```python
 from ultralytics import YOLO
 
 # Load YOLOv8 model
@@ -38,8 +38,8 @@ model = YOLO("yolov8s.pt")
 
 # Train the model
 model.train(data="pipeline-leak-prediction/data.yaml", epochs=50, batch=16, imgsz=640)
-
-The trained model and logs will be saved in runs/train/exp/weights/best.pt.
+```
+The trained model and logs will be saved in `runs/train/exp/weights/best.pt`.
 
 ## 📊 Evaluation Metrics
 ### 📌 Confusion Matrix
@@ -52,7 +52,7 @@ The normalized matrix provides a proportionate view of the classification result
 
 ### 📌 F1-Confidence Curve
 ![F1 Curve](F1_curve.png)
-Illustrates the *F1-score* variation with confidence thresholds.
+Illustrates the **F1-score** variation with confidence thresholds.
 
 ### 📌 Precision-Confidence Curve
 ![Precision Curve](P_curve.png)
@@ -66,15 +66,15 @@ Shows the trade-off between precision and recall.
 ![Recall Curve](R_curve.png)
 Indicates recall performance at various confidence thresholds.
 
-## 🛠 Running Inference
+## 🛠️ Running Inference
 ### 3️⃣ Test the Model on Sample Images
-python
+```python
 # Load trained model
 model = YOLO("runs/train/exp/best.pt")
 
 # Run inference on a test image
 results = model("sample_image.jpg", show=True)
-
+```
 
 ## 📸 Model Predictions
 ### 🔹 Sample Training Batch
@@ -86,12 +86,12 @@ Sample images from the training process.
 Final detections on test images after model training.
 
 ## 🚀 Future Improvements
-- *Use a larger dataset* to enhance generalization.
-- *Experiment with different YOLO versions* (YOLOv8m, YOLOv8x) for improved accuracy.
-- *Optimize for real-time deployment* using *ONNX or TensorRT*.
+- **Use a larger dataset** to enhance generalization.
+- **Experiment with different YOLO versions** (YOLOv8m, YOLOv8x) for improved accuracy.
+- **Optimize for real-time deployment** using **ONNX or TensorRT**.
 
 ---
-### *📌 Conclusion*
-This project successfully applies *YOLOv8* for *natural gas leak detection* in pipelines. The model automates inspections and enhances safety monitoring through deep learning techniques.
+### **📌 Conclusion**
+This project successfully applies **YOLOv8** for **natural gas leak detection** in pipelines. The model automates inspections and enhances safety monitoring through deep learning techniques.
 
-💡 *Contributions & Feedback Welcome!*
+💡 **Contributions & Feedback Welcome!**
