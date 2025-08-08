@@ -1,7 +1,7 @@
-# Natural Gas Leak Detection using YOLO
+# Natural-Gas-Leak-Detection-Using-YOLO-ViT-Swin-Transformers.
 
 ## 🚀 Overview
-This project uses **YOLO (You Only Look Once)** to detect **natural gas leaks** from pipeline images and videos. It applies **deep learning and computer vision** techniques to automate the detection process and improve safety measures.
+TunnelView is an AI system for automated industrial pipeline leak detection. Using a Triple-Modal Deep Learning framework (YOLOv8, ViT, & Swin Transformer), it fuses model outputs for precise analysis. Designed for drone or CCTV deployment in oil, gas, and chemical plants, it enhances operational safety and prevents environmental risks.
 
 ## 📂 Dataset Structure
 The dataset is structured as follows:
@@ -95,3 +95,4 @@ Final detections on test images after model training.
 This project successfully applies **YOLOv8** for **natural gas leak detection** in pipelines. The model automates inspections and enhances safety monitoring through deep learning techniques.
 
 💡 **Contributions & Feedback Welcome!**
+
